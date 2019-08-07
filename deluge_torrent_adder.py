@@ -61,16 +61,19 @@ def on_connect_success(result):
     for torrent in torrents_to_add:
         client.core.add_torrent_magnet(torrent['magnet'], {}).addCallback(on_torrent_added,torrent['title'])\
                                                                  .addErrback(on_torrent_added_fail)
+    if os.path.isfile(pickle_file_name):
+        os.remove(pickle_file_name)
+        LOGGER.info("Torrents pickle file removed")
 
 def get_torrents_to_add() -> list:
-    torrents = []
+    torrents = {}
     if os.path.isfile(pickle_file_name):
         with open(pickle_file_name, "rb") as pickle_in:
             torrents = pickle.load(pickle_in)
 
     magnets = []
-    for release in torrents:
-        magnet_title, magnet_link = get_best_torrent_option(release.get('options'))
+    for k, v in torrents.items():
+        magnet_title, magnet_link = get_best_torrent_option(v)
         if magnet_title != '':
             magnets.append({"title": magnet_title, "magnet": magnet_link})
         else:
@@ -105,14 +108,11 @@ def get_best_torrent_option(torrent_options: list) -> tuple:
 # We create another callback function to be called when an error is encountered
 def on_connect_fail(result):
     LOGGER.info("Connection failed!")
-    LOGGER.info("result:", result)
+    LOGGER.info("result: {:}".format(result))
 
 
 def stop_reactor():
     client.disconnect().addCallback(lambda ignore: reactor.stop())
-    if os.path.isfile(pickle_file_name):
-        os.remove(pickle_file_name)
-        LOGGER.info("Torrents pickle file removed")
     LOGGER.info('Disconnecting from client')
     LOGGER.info('Stopping reactor')
 

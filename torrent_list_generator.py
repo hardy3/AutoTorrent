@@ -129,7 +129,7 @@ def get_torrent_file_size(url: str, cookie: dict) -> float:
                 return float(size[0]) * 1000 if 'GB' in size[1] else float(size[0])
 
 
-def get_today_torrent_releases(releases: list, saved_torrents: list) -> list:
+def get_today_torrent_releases(releases: list, saved_torrents: dict) -> dict:
     LOGGER.info("Getting feed data")
     feed_rarbg = feedparser.parse('https://rarbg.to/rss.php?category=2;18;41')
     feed_rarbg_magnet = feedparser.parse('https://rarbg.to/rssdd_magnet.php?category=2;18;41')
@@ -142,16 +142,17 @@ def get_today_torrent_releases(releases: list, saved_torrents: list) -> list:
             torrent_quality_re = re.compile(r'(1080p|720p)', re.IGNORECASE)
             torrent_rip_type_re = re.compile(r'\.(HDTV|WEB\w*)\.', re.IGNORECASE)
 
-            ep_torrents = next(
-                (t for t in saved_torrents if t['name'] == ' '.join([episode['name'], episode['number']])), None)
+            ep_name = ' '.join([episode['name'], episode['number']])
+            ep_torrents = saved_torrents.get(ep_name, None)
             if ep_torrents is None:
-                ep_torrents = {'name': ' '.join([episode['name'], episode['number']]), 'options': []}
+                LOGGER.info("ep_torrents empty")
+                ep_torrents = []
 
             found_torrents = [entry for entry in feed_rarbg.entries
                               if torrent_name_re.search(entry.get("title", ""))]
 
             for torrent in found_torrents:
-                if next((x for x in ep_torrents['options'] if x.get('title') == torrent.get('title')), None) is None:
+                if next((opt for opt in ep_torrents if opt.get('title').strip() == torrent.get('title').strip()), None) is None:
                     title = torrent.get('title', '')
                     link = torrent.get('link', '')
                     quality = torrent_quality_re.search(title).group() if torrent_quality_re.search(
@@ -162,14 +163,14 @@ def get_today_torrent_releases(releases: list, saved_torrents: list) -> list:
                         next(item for item in feed_rarbg_magnet.entries if item['title'] == torrent.get("title", ""))[
                             'link']
                     size = get_torrent_file_size(torrent.get("link", ""), rarbg_cookie)
-                    ep_torrents['options'].append(
+                    ep_torrents.append(
                         {'title': title, 'link': link, 'rip_type': rip_type, 'quality': quality, 'size': size,
                          'magnet': magnet})
                     LOGGER.info('Added: {:s}'.format(title))
                     # pprint.pprint({'title': title, 'link': link, 'rip_type': rip_type, 'quality': quality, 'size': size,
                     #                'magnet': magnet})
 
-            saved_torrents.append(ep_torrents)
+            saved_torrents[ep_name] = ep_torrents
 
     LOGGER.info('Done parsing feed data')
     return saved_torrents
@@ -177,18 +178,17 @@ def get_today_torrent_releases(releases: list, saved_torrents: list) -> list:
 
 def main():
     LOGGER.info('Starting Torrent List Generator')
-    torrents = []
+    torrents = {}
     if os.path.isfile(pickle_file_name):
         with open(os.path.join(__location__, pickle_file_name), "rb") as pickle_in:
             torrents = pickle.load(pickle_in)
-            pprint.pprint(torrents)
+            #pprint.pprint(torrents)
 
     pog_calendar = get_pog_calendar()
 
     today_releases = pog_calendar.get_today_releases()
-    LOGGER.info(today_releases)
     # For testing:
-    today_releases = [{'name': 'Southern Charm New Orleans', 'number': 's02e08', 'provider': 'HBO'}]
+    today_releases = [{'name': 'Ben.10', 'number': 'S03E19', 'provider': 'HBO'}]
     updated_torrents = get_today_torrent_releases(today_releases, torrents)
     with open(os.path.join(__location__, pickle_file_name), "wb") as pickle_out:
         LOGGER.info('Saving updated torrent data')

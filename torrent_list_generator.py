@@ -44,8 +44,8 @@ logging.config.dictConfig(config={
     },
 })
 
-pickle_file_name = 'torrents.pickle'
 __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
+pickle_file_name = os.path.join(__location__,'torrents.pickle')
 
 LOGGER = logging.getLogger(__name__)
 
@@ -142,7 +142,7 @@ def get_today_torrent_releases(releases: list, saved_torrents: dict) -> dict:
             torrent_quality_re = re.compile(r'(1080p|720p)', re.IGNORECASE)
             torrent_rip_type_re = re.compile(r'\.(HDTV|WEB\w*)\.', re.IGNORECASE)
 
-            ep_name = ' '.join([episode['name'], episode['number']])
+            ep_name = '_'.join(['_'.join(episode['name'].split()), episode['number']])
             ep_torrents = saved_torrents.get(ep_name, None)
             if ep_torrents is None:
                 LOGGER.info("ep_torrents empty")
@@ -180,7 +180,7 @@ def main():
     LOGGER.info('Starting Torrent List Generator')
     torrents = {}
     if os.path.isfile(pickle_file_name):
-        with open(os.path.join(__location__, pickle_file_name), "rb") as pickle_in:
+        with open(pickle_file_name, "rb") as pickle_in:
             torrents = pickle.load(pickle_in)
             #pprint.pprint(torrents)
 
@@ -188,9 +188,9 @@ def main():
 
     today_releases = pog_calendar.get_today_releases()
     # For testing:
-    today_releases = [{'name': 'Ben.10', 'number': 'S03E19', 'provider': 'HBO'}]
+    # today_releases = [{'name': 'MasterChef', 'number': 'S10E21', 'provider': 'HBO'}]
     updated_torrents = get_today_torrent_releases(today_releases, torrents)
-    with open(os.path.join(__location__, pickle_file_name), "wb") as pickle_out:
+    with open(pickle_file_name, "wb") as pickle_out:
         LOGGER.info('Saving updated torrent data')
         pickle.dump(updated_torrents, pickle_out)
 

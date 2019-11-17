@@ -101,12 +101,14 @@ def get_best_torrent_option(torrent_options: list) -> tuple:
             for web_t in web_rel:
                 if web_t.get('size') < 1500.0:
                     return web_t.get('title'), web_t.get('magnet')
-        elif len(hdtv_rel) > 0:
+
+        if len(hdtv_rel) > 0:
             hdtv_rel.sort(key=lambda k: k['seeders'])
             for hd_t in hdtv_rel:
                 if hd_t.get('size') < 1500.0:
                     return hd_t.get('title'), hd_t.get('magnet')
-        else:
+
+        if len(torrent_options) > 0:
             torrent_options.sort(key=lambda k: k['seeders'], reverse=True)
             for opt in torrent_options:
                 if opt.get('size') < 1500.0:

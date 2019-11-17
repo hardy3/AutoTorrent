@@ -188,7 +188,7 @@ def main():
 
     today_releases = pog_calendar.get_today_releases()
     # For testing:
-    # today_releases = [{'name': 'MasterChef', 'number': 'S10E21', 'provider': 'HBO'}]
+    #today_releases = [{'name': 'Halloween.Baking.Championship', 'number': 's05e01', 'provider': 'HBO'}]
     updated_torrents = get_today_torrent_releases(today_releases, torrents)
     with open(pickle_file_name, "wb") as pickle_out:
         LOGGER.info('Saving updated torrent data')

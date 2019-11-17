@@ -12,6 +12,7 @@ import pickle
 import re
 import os
 import logging.config
+import time
 
 logging.config.dictConfig(config={
     'version': 1,
@@ -66,6 +67,7 @@ def on_connect_success(result):
     for torrent in torrents_to_add:
         client.core.add_torrent_magnet(torrent['magnet'], {}).addCallback(on_torrent_added, torrent['title']) \
             .addErrback(on_torrent_added_fail)
+        time.sleep(0.2)
     if os.path.isfile(pickle_file_name):
         os.remove(pickle_file_name)
         LOGGER.info("Torrents pickle file removed")
@@ -77,6 +79,7 @@ def get_torrents_to_add() -> list:
             torrents = pickle.load(pickle_in)
 
     magnets = []
+    LOGGER.info("------------------------------------------------")
     for k, v in torrents.items():
         new_torrent_list = get_torrents_seeds(v)
         magnet_title, magnet_link = get_best_torrent_option(new_torrent_list)
@@ -84,6 +87,7 @@ def get_torrents_to_add() -> list:
             magnets.append({"title": magnet_title, "magnet": magnet_link})
         else:
             LOGGER.info("No torrent to add for {:}".format(k))
+        LOGGER.info("------------------------------------------------")
 
     return magnets
 
@@ -116,16 +120,21 @@ def get_torrents_seeds(torrent_options: list) -> list:
     if len(torrent_options) > 0:
         new_torrent_options = []
         for torrent in torrent_options:
+            LOGGER.info(torrent['title'])
             get_torrent = requests.get(torrent['link'], cookies=rarbg_cookie)
             soup_obj = bs4.BeautifulSoup(get_torrent.text, features="lxml")
             table = soup_obj.select('body > table:nth-child(6) > tr > td:nth-child(2) > div > table > tr:nth-child(2) > td > div > table')
-            for tr in table[0].select('tr'):
-                for td in tr.select('td', {'class': 'header2'}):
-                    if td.text.strip() == "Peers:":
-                        peers = tr.select('td.lista')[0].text.strip()
-                        seeders = re.search('Seeders : (\d*)', peers)
-                        torrent['seeders'] = seeders.group(1)
+            if table:
+                for tr in table[0].select('tr'):
+                    for td in tr.select('td', {'class': 'header2'}):
+                        if td.text.strip() == "Peers:":
+                            peers = tr.select('td.lista')[0].text.strip()
+                            seeders = re.search('Seeders : (\d*)', peers)
+                            torrent['seeders'] = seeders.group(1)
+            if 'seeders' not in torrent:
+                torrent['seeders'] = '0'
             new_torrent_options.append(torrent)
+            LOGGER.info("Seeds: {}".format(torrent.get('seeders',-3)))
         return new_torrent_options
 
     return []
@@ -152,6 +161,6 @@ if __name__ == '__main__':
     # We add the callback (in this case it's an errback, for error)
     d.addErrback(on_connect_fail)
     # Manually stop reactor after 5 seconds
-    reactor.callLater(5, stop_reactor)
+    reactor.callLater(30, stop_reactor)
     # Run the twisted main loop to make everything go
     reactor.run()

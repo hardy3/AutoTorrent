@@ -140,7 +140,7 @@ def get_today_torrent_releases(releases: list, saved_torrents: dict) -> dict:
             torrent_name_re = re.compile(r'.*{:s}.*{:s}.*'.format('.'.join(episode['name'].split()), episode['number']),
                                          re.IGNORECASE)
             torrent_quality_re = re.compile(r'(1080p|720p)', re.IGNORECASE)
-            torrent_rip_type_re = re.compile(r'\.(HDTV|WEB\w*)\.', re.IGNORECASE)
+            torrent_rip_type_re = re.compile(r'\.(HDTV|WEB[\w|-]*)\.', re.IGNORECASE)
 
             ep_name = '_'.join(['_'.join(episode['name'].split()), episode['number']])
             ep_torrents = saved_torrents.get(ep_name, None)

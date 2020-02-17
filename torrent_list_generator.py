@@ -137,12 +137,12 @@ def get_today_torrent_releases(releases: list, saved_torrents: dict) -> dict:
 
     for episode in releases:
         if episode['provider'] != 'Netflix':
-            torrent_name_re = re.compile(r'.*{:s}.*{:s}.*'.format('.'.join(episode['name'].split()), episode['number']),
+            torrent_name_re = re.compile(r'.*{:s}.*{:s}.*'.format('.'.join(re.split('\s|: ', episode['name'])), episode['number']),
                                          re.IGNORECASE)
             torrent_quality_re = re.compile(r'(1080p|720p)', re.IGNORECASE)
             torrent_rip_type_re = re.compile(r'\.(HDTV|WEB[\w|-]*)\.', re.IGNORECASE)
 
-            ep_name = '_'.join(['_'.join(episode['name'].split()), episode['number']])
+            ep_name = '_'.join(['_'.join(re.split('\s|: ', episode['name'])), episode['number']])
             ep_torrents = saved_torrents.get(ep_name, None)
             if ep_torrents is None:
                 LOGGER.info("ep_torrents empty")

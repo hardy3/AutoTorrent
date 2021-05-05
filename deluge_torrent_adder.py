@@ -32,8 +32,8 @@ logging.config.dictConfig(config={
         'file': {
             'class': 'logging.handlers.TimedRotatingFileHandler',
             'filename': '/var/log/auto_torrent/auto_torrent.log',
-            #'filename': 'auto_torrent.log',
-            #'mode': 'w',
+            # 'filename': 'auto_torrent.log',
+            # 'mode': 'w',
             'formatter': 'default',
             'when': 'midnight',
             'backupCount': 10,
@@ -46,8 +46,9 @@ logging.config.dictConfig(config={
     },
 })
 
-__location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
-pickle_file_name = os.path.join(__location__,'torrents.pickle')
+__location__ = os.path.realpath(os.path.join(
+    os.getcwd(), os.path.dirname(__file__)))
+pickle_file_name = os.path.join(__location__, 'torrents.pickle')
 
 LOGGER = logging.getLogger(__name__)
 
@@ -72,6 +73,7 @@ def on_connect_success(result):
         os.remove(pickle_file_name)
         LOGGER.info("Torrents pickle file removed")
 
+
 def get_torrents_to_add() -> list:
     torrents = {}
     if os.path.isfile(pickle_file_name):
@@ -81,8 +83,8 @@ def get_torrents_to_add() -> list:
     magnets = []
     LOGGER.info("------------------------------------------------")
     for k, v in torrents.items():
-        new_torrent_list = get_torrents_seeds(v)
-        magnet_title, magnet_link = get_best_torrent_option(new_torrent_list)
+        #new_torrent_list = get_torrents_seeds(v)
+        magnet_title, magnet_link = get_best_torrent_option(v)
         if magnet_title != '':
             magnets.append({"title": magnet_title, "magnet": magnet_link})
         else:
@@ -94,27 +96,34 @@ def get_torrents_to_add() -> list:
 
 def get_best_torrent_option(torrent_options: list) -> tuple:
     if len(torrent_options) > 0:
-        web_rel = [w for w in torrent_options if 'WEB'.casefold() in w.get('rip_type').casefold()]
-        hdtv_rel = [h for h in torrent_options if 'HDTV'.casefold() in h.get('rip_type').casefold()]
+        web_rel = [w for w in torrent_options if 'WEB'.casefold()
+                   in w.get('rip_type').casefold()]
+        hdtv_rel = [h for h in torrent_options if 'HDTV'.casefold()
+                    in h.get('rip_type').casefold()]
+
         if len(web_rel) > 0:
             web_rel.sort(key=lambda k: k['seeders'], reverse=True)
-            for web_t in web_rel:
-                if web_t.get('size') < 1500.0:
-                    return web_t.get('title'), web_t.get('magnet')
+            return web_rel[0].get('title'), web_rel[0].get('magnet')
+            # for web_t in web_rel:
+            #     if web_t.get('size') < 1500.0:
+            #         return web_t.get('title'), web_t.get('magnet')
 
-        if len(hdtv_rel) > 0:
+        elif len(hdtv_rel) > 0:
             hdtv_rel.sort(key=lambda k: k['seeders'])
-            for hd_t in hdtv_rel:
-                if hd_t.get('size') < 1500.0:
-                    return hd_t.get('title'), hd_t.get('magnet')
+            return hdtv_rel[0].get('title'), hdtv_rel[0].get('magnet')
+            # for hd_t in hdtv_rel:
+            #     if hd_t.get('size') < 1500.0:
+            #         return hd_t.get('title'), hd_t.get('magnet')
 
-        if len(torrent_options) > 0:
+        else:
             torrent_options.sort(key=lambda k: k['seeders'], reverse=True)
-            for opt in torrent_options:
-                if opt.get('size') < 1500.0:
-                    return opt.get('title'), opt.get('magnet')
+            return torrent_options[0].get('title'), torrent_options[0].get('magnet')
+            # for opt in torrent_options:
+            #     if opt.get('size') < 1500.0:
+            #         return opt.get('title'), opt.get('magnet')
 
     return '', ''
+
 
 def get_torrents_seeds(torrent_options: list) -> list:
     with open(os.path.join(__location__, 'rarbg_cookie.json')) as cookie:
@@ -125,7 +134,8 @@ def get_torrents_seeds(torrent_options: list) -> list:
             LOGGER.info(torrent['title'])
             get_torrent = requests.get(torrent['link'], cookies=rarbg_cookie)
             soup_obj = bs4.BeautifulSoup(get_torrent.text, features="lxml")
-            table = soup_obj.select('body > table:nth-child(6) > tr > td:nth-child(2) > div > table > tr:nth-child(2) > td > div > table')
+            table = soup_obj.select(
+                'body > table:nth-child(6) > tr > td:nth-child(2) > div > table > tr:nth-child(2) > td > div > table')
             if table:
                 for tr in table[0].select('tr'):
                     for td in tr.select('td', {'class': 'header2'}):
@@ -136,12 +146,14 @@ def get_torrents_seeds(torrent_options: list) -> list:
             if 'seeders' not in torrent:
                 torrent['seeders'] = '0'
             new_torrent_options.append(torrent)
-            LOGGER.info("Seeds: {}".format(torrent.get('seeders',-3)))
+            LOGGER.info("Seeds: {}".format(torrent.get('seeders', -3)))
         return new_torrent_options
 
     return []
 
 # We create another callback function to be called when an error is encountered
+
+
 def on_connect_fail(result):
     LOGGER.info("Connection failed!")
     LOGGER.info("result: {:}".format(result))
@@ -151,6 +163,7 @@ def stop_reactor():
     client.disconnect().addCallback(lambda ignore: reactor.stop())
     LOGGER.info('Disconnecting from client')
     LOGGER.info('Stopping reactor')
+
 
 if __name__ == '__main__':
     LOGGER.info('Starting Deluge Torrent Adder')

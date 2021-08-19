@@ -1,0 +1,416 @@
+#EXTM3U 
+#EXTVLCOPT--http-reconnect=true
+#EXTINF:-1,RTP1
+#EXTVLCOPT:program=101
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:65:65:53:CE40000:0:0:0:
+#EXTINF:-1,RTP2
+#EXTVLCOPT:program=102
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:66:65:53:CE40000:0:0:0:
+#EXTINF:-1,SIC
+#EXTVLCOPT:program=1103
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:44F:65:53:CE40000:0:0:0:
+#EXTINF:-1,TVI
+#EXTVLCOPT:program=1104
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:450:65:53:CE40000:0:0:0:
+#EXTINF:-1,TVI24
+#EXTVLCOPT:program=133
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:85:65:53:CE40000:0:0:0:
+#EXTINF:-1,SIC Notícias
+#EXTVLCOPT:program=6014
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:177E:26:36:CE40000:0:0:0:
+#EXTINF:-1,CMTV
+#EXTVLCOPT:program=1107
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:453:65:53:CE40000:0:0:0:
+#EXTINF:-1,Porto Canal
+#EXTVLCOPT:program=1109
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:455:65:53:CE40000:0:0:0:
+#EXTINF:-1,RTP3
+#EXTVLCOPT:program=105
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:69:65:53:CE40000:0:0:0:
+#EXTINF:-1,RTP Açores
+#EXTVLCOPT:program=119
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:77:65:53:CE40000:0:0:0:
+#EXTINF:-1,RTP Madeira
+#EXTVLCOPT:program=106
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:6A:65:53:CE40000:0:0:0:
+#EXTINF:-1,RTP África
+#EXTVLCOPT:program=1116
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:45C:65:53:CE40000:0:0:0:
+#EXTINF:-1,RTP Memória
+#EXTVLCOPT:program=1113
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:459:65:53:CE40000:0:0:0:
+#EXTINF:-1,SIC Caras
+#EXTVLCOPT:program=6027
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:178B:26:36:CE40000:0:0:0:
+#EXTINF:-1,SIC Mulher
+#EXTVLCOPT:program=5000
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1388:30:36:CE40000:0:0:0:
+#EXTINF:-1,SIC Radical
+#EXTVLCOPT:program=6026
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:178A:26:36:CE40000:0:0:0:
+#EXTINF:-1,Canal Q
+#EXTVLCOPT:program=6025
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1789:26:36:CE40000:0:0:0:
+#EXTINF:-1,Globo
+#EXTVLCOPT:program=138
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:8A:65:53:CE40000:0:0:0:
+#EXTINF:-1,Globo Now
+#EXTVLCOPT:program=6055
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:17A7:2F:36:CE40000:0:0:0:
+#EXTINF:-1,TVI Ficção
+#EXTVLCOPT:program=6015
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:177F:26:36:CE40000:0:0:0:
+#EXTINF:-1,TVI Reality - Big Brother
+#EXTVLCOPT:program=5042
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:13B2:30:36:CE40000:0:0:0:
+#EXTINF:-1,SPORT TV 1 HD
+#EXTVLCOPT:program=1401
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:579:68:53:CE40000:0:0:0:
+#EXTINF:-1,SPORT TV 2 HD
+#EXTVLCOPT:program=1402
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:57A:68:53:CE40000:0:0:0:
+#EXTINF:-1,SPORT TV 3 HD
+#EXTVLCOPT:program=1403
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:57B:68:53:CE40000:0:0:0:
+#EXTINF:-1,SPORT TV 4
+#EXTVLCOPT:program=6019
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1783:26:36:CE40000:0:0:0:
+#EXTINF:-1,SPORT TV 5
+#EXTVLCOPT:program=5016
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1398:30:36:CE40000:0:0:0:
+#EXTINF:-1,SPORT TV +
+#EXTVLCOPT:program=5005
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:138D:30:36:CE40000:0:0:0:
+#EXTINF:-1,Eleven 1 HD
+#EXTVLCOPT:program=5038
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:13AE:27:36:CE40000:0:0:0:
+#EXTINF:-1,Eleven 2 HD
+#EXTVLCOPT:program=1407
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:57F:68:53:CE40000:0:0:0:
+#EXTINF:-1,Eleven 3
+#EXTVLCOPT:program=1411
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:583:68:53:CE40000:0:0:0:
+#EXTINF:-1,Eleven 4
+#EXTVLCOPT:program=5040
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:13B0:27:36:CE40000:0:0:0:
+#EXTINF:-1,Eleven 5
+#EXTVLCOPT:program=5041
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:13B1:27:36:CE40000:0:0:0:
+#EXTINF:-1,Eleven 6
+#EXTVLCOPT:program=1413
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:585:68:53:CE40000:0:0:0:
+#EXTINF:-1,BTV HD
+#EXTVLCOPT:program=1408
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:580:68:53:CE40000:0:0:0:
+#EXTINF:-1,NBA TV HD
+#EXTVLCOPT:program=6038
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1796:27:36:CE40000:0:0:0:
+#EXTINF:-1,11
+#EXTVLCOPT:program=6043
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:179B:2F:36:CE40000:0:0:0:
+#EXTINF:-1,Sporting TV
+#EXTVLCOPT:program=5020
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:139C:30:36:CE40000:0:0:0:
+#EXTINF:-1,PFC
+#EXTVLCOPT:program=6032
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1790:26:36:CE40000:0:0:0:
+#EXTINF:-1,Eurosport 1 HD
+#EXTVLCOPT:program=5034
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:13AA:27:36:CE40000:0:0:0:
+#EXTINF:-1,Eurosport 2
+#EXTVLCOPT:program=6023
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1787:26:36:CE40000:0:0:0:
+#EXTINF:-1,A Bola TV
+#EXTVLCOPT:program=406
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:196:68:53:CE40000:0:0:0:
+#EXTINF:-1,Toros TV
+#EXTVLCOPT:program=5017
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1399:30:36:CE40000:0:0:0:
+#EXTINF:-1,Caçavision
+#EXTVLCOPT:program=401
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:191:68:53:CE40000:0:0:0:
+#EXTINF:-1,TV Cine Top HD
+#EXTVLCOPT:program=6045
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:179D:2F:36:CE40000:0:0:0:
+#EXTINF:-1,TV Cine Edition HD
+#EXTVLCOPT:program=6039
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1797:27:36:CE40000:0:0:0:
+#EXTINF:-1,TV Cine Emotion HD
+#EXTVLCOPT:program=6040
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1798:27:36:CE40000:0:0:0:
+#EXTINF:-1,TV Cine Action HD
+#EXTVLCOPT:program=6046
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:179E:2F:36:CE40000:0:0:0:
+#EXTINF:-1,AMC HD
+#EXTVLCOPT:program=6047
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:179F:2F:36:CE40000:0:0:0:
+#EXTINF:-1,FOX Movies
+#EXTVLCOPT:program=5002
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:138A:30:36:CE40000:0:0:0:
+#EXTINF:-1,Cinemundo
+#EXTVLCOPT:program=110
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:6E:65:53:CE40000:0:0:0:
+#EXTINF:-1,Hollywood HD
+#EXTVLCOPT:program=6021
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1785:26:36:CE40000:0:0:0:
+#EXTINF:-1,FOX HD
+#EXTVLCOPT:program=1406
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:57E:68:53:CE40000:0:0:0:
+#EXTINF:-1,FOX Life HD
+#EXTVLCOPT:program=5035
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:13AB:27:36:CE40000:0:0:0:
+#EXTINF:-1,FOX Crime HD
+#EXTVLCOPT:program=5036
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:13AC:27:36:CE40000:0:0:0:
+#EXTINF:-1,Fox Comedy
+#EXTVLCOPT:program=1412
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:584:68:53:CE40000:0:0:0:
+#EXTINF:-1,AXN HD
+#EXTVLCOPT:program=1405
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:57D:68:53:CE40000:0:0:0:
+#EXTINF:-1,AXN Movies HD
+#EXTVLCOPT:program=5030
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:13A6:27:36:CE40000:0:0:0:
+#EXTINF:-1,AXN White HD
+#EXTVLCOPT:program=5033
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:13A9:27:36:CE40000:0:0:0:
+#EXTINF:-1,SyFy
+#EXTVLCOPT:program=6013
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:177D:30:36:CE40000:0:0:0:
+#EXTINF:-1,BBC Entertainment
+#EXTVLCOPT:program=6053
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:17A5:2F:36:CE40000:0:0:0:
+#EXTINF:-1,CBS Reality
+#EXTVLCOPT:program=407
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:197:68:53:CE40000:0:0:0:
+#EXTINF:-1,E! Entertainment
+#EXTVLCOPT:program=6028
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:178C:26:36:CE40000:0:0:0:
+#EXTINF:-1,FTV
+#EXTVLCOPT:program=6029
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:178D:26:36:CE40000:0:0:0:
+#EXTINF:-1,National Geographic HD
+#EXTVLCOPT:program=1404
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:57C:68:53:CE40000:0:0:0:
+#EXTINF:-1, National Geographic Wild
+#EXTVLCOPT:program=6041
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1799:27:36:CE40000:0:0:0:
+#EXTINF:-1,Discovery Channel HD
+#EXTVLCOPT:program=6048
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:17A0:2F:36:CE40000:0:0:0:
+#EXTINF:-1,Crime+Investigation
+#EXTVLCOPT:program=6037
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1795:26:36:CE40000:0:0:0:
+#EXTINF:-1,TLC
+#EXTVLCOPT:program=5001
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1389:30:36:CE40000:0:0:0:
+#EXTINF:-1,Odisseia
+#EXTVLCOPT:program=6022
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1786:26:36:CE40000:0:0:0:
+#EXTINF:-1,História
+#EXTVLCOPT:program=112
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:70:65:53:CE40000:0:0:0:
+#EXTINF:-1,Blaze
+#EXTVLCOPT:program=5004
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:138C:30:36:CE40000:0:0:0:
+#EXTINF:-1,24 Kitchen HD
+#EXTVLCOPT:program=5037
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:13AD:27:36:CE40000:0:0:0:
+#EXTINF:-1,EEC Secundário
+#EXTVLCOPT:program=1423
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:58F:68:53:CE40000:0:0:0:
+#EXTINF:-1,Canção Nova
+#EXTVLCOPT:program=6031
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:178F:26:36:CE40000:0:0:0:
+#EXTINF:-1,TV Record
+#EXTVLCOPT:program=169
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:A9:65:53:CE40000:0:0:0:
+#EXTINF:-1,MTV Portugal
+#EXTVLCOPT:program=128
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:80:65:53:CE40000:0:0:0:
+#EXTINF:-1,MCM POP
+#EXTVLCOPT:program=6030
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:178E:26:36:CE40000:0:0:0:
+#EXTINF:-1,VH1
+#EXTVLCOPT:program=5006
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:138E:30:36:CE40000:0:0:0:
+#EXTINF:-1,Afro Music
+#EXTVLCOPT:program=6056
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:17A8:2F:36:CE40000:0:0:0:
+#EXTINF:-1,Mezzo
+#EXTVLCOPT:program=5007
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:138F:30:36:CE40000:0:0:0:
+#EXTINF:-1,Trace Toca
+#EXTVLCOPT:program=6051
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:17A3:2F:36:CE40000:0:0:0:
+#EXTINF:-1,Trace Urban
+#EXTVLCOPT:program=6042
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:179A:27:36:CE40000:0:0:0:
+#EXTINF:-1,Disney Channel
+#EXTVLCOPT:program=6044
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:179C:2F:36:CE40000:0:0:0:
+#EXTINF:-1,Disney Júnior
+#EXTVLCOPT:program=5019
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:139B:30:36:CE40000:0:0:0:
+#EXTINF:-1,Canal Panda
+#EXTVLCOPT:program=6020
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1784:26:36:CE40000:0:0:0:
+#EXTINF:-1,Cartoon Network
+#EXTVLCOPT:program=6024
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1788:26:36:CE40000:0:0:0:
+#EXTINF:-1,Baby TV
+#EXTVLCOPT:program=113
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:71:65:53:CE40000:0:0:0:
+#EXTINF:-1,Biggs
+#EXTVLCOPT:program=5009
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1391:30:36:CE40000:0:0:0:
+#EXTINF:-1,Jim Jam
+#EXTVLCOPT:program=130
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:82:65:53:CE40000:0:0:0:
+#EXTINF:-1,Lolly Kids
+#EXTVLCOPT:program=402
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:192:68:53:CE40000:0:0:0:
+#EXTINF:-1,Nickelodeon
+#EXTVLCOPT:program=808
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:328:2F:36:CE40000:0:0:0:
+#EXTINF:-1,Nick Jr.
+#EXTVLCOPT:program=816
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:330:2F:36:CE40000:0:0:0:
+#EXTINF:-1,SIC K
+#EXTVLCOPT:program=127
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:7F:65:53:CE40000:0:0:0:
+#EXTINF:-1,ARTV
+#EXTVLCOPT:program=120
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:78:65:53:CE40000:0:0:0:
+#EXTINF:-1,AJE
+#EXTVLCOPT:program=7305
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1C89:F:2:CE4AA8A:0:0:0:
+#EXTINF:-1,BBC World News
+#EXTVLCOPT:program=5013
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1395:30:36:CE40000:0:0:0:
+#EXTINF:-1,Bloomberg
+#EXTVLCOPT:program=6033
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1791:26:36:CE40000:0:0:0:
+#EXTINF:-1,Channel 1 Russia
+#EXTVLCOPT:program=408
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:198:68:53:CE40000:0:0:0:
+#EXTINF:-1,CNBC Europe
+#EXTVLCOPT:program=6034
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1792:26:36:CE40000:0:0:0:
+#EXTINF:-1,CNN
+#EXTVLCOPT:program=5011
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1393:30:36:CE40000:0:0:0:
+#EXTINF:-1,Deutsche Welle (A)
+#EXTVLCOPT:program=6058
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:17AA:2F:36:CE40000:0:0:0:
+#EXTINF:-1,Euronews
+#EXTVLCOPT:program=5014
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1396:30:36:CE40000:0:0:0:
+#EXTINF:-1,France 24
+#EXTVLCOPT:program=5015
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1397:30:36:CE40000:0:0:0:
+#EXTINF:-1,TV5 Monde
+#EXTVLCOPT:program=5021
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:139D:30:36:CE40000:0:0:0:
+#EXTINF:-1,NHK World Japan
+#EXTVLCOPT:program=6057
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:17A9:2F:36:CE40000:0:0:0:
+#EXTINF:-1,SKY News
+#EXTVLCOPT:program=5012
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1394:30:36:CE40000:0:0:0:
+#EXTINF:-1,TVE 24H
+#EXTVLCOPT:program=5010
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1392:30:36:CE40000:0:0:0:
+#EXTINF:-1,TSA-Record News
+#EXTVLCOPT:program=2700
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:A8C:6:6:CE40000:0:0:0:
+#EXTINF:-1,CUBAVISION INTERNACIONAL
+#EXTVLCOPT:program=2100
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:834:6:6:CE40000:0:0:0:
+#EXTINF:-1,TVEi
+#EXTVLCOPT:program=5008
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1390:30:36:CE40000:0:0:0:
+#EXTINF:-1,TV Galicia
+#EXTVLCOPT:program=6035
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1793:26:36:CE40000:0:0:0:
+#EXTINF:-1,HOT
+#EXTVLCOPT:program=5018
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:139A:30:36:CE40000:0:0:0:
+#EXTINF:-1,Playboy TV
+#EXTVLCOPT:program=6036
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:1794:26:36:CE40000:0:0:0:
+#EXTINF:-1,Venus
+#EXTVLCOPT:program=6059
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:1:17AB:2F:36:CE40000:0:0:0:
+#EXTINF:-1,Antena 1
+#EXTVLCOPT:program=6001
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:2:1771:30:36:CE40000:0:0:0:
+#EXTINF:-1, Antena 2
+#EXTVLCOPT:program=6002
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:2:1772:30:36:CE40000:0:0:0:
+#EXTINF:-1,Antena 3
+#EXTVLCOPT:program=6003
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:2:1773:30:36:CE40000:0:0:0:
+#EXTINF:-1,Cidade FM
+#EXTVLCOPT:program=6006
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:2:1776:30:36:CE40000:0:0:0:
+#EXTINF:-1,Lusitânia
+#EXTVLCOPT:program=6005
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:2:1775:30:36:CE40000:0:0:0:
+#EXTINF:-1,M80
+#EXTVLCOPT:program=6009
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:2:1779:30:36:CE40000:0:0:0:
+#EXTINF:-1,Mega Hits
+#EXTVLCOPT:program=6010
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:2:177A:30:36:CE40000:0:0:0:
+#EXTINF:-1,Rádio Comercial
+#EXTVLCOPT:program=6007
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:2:1777:30:36:CE40000:0:0:0:
+#EXTINF:-1,Radio Amália
+#EXTVLCOPT:program=6063
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:2:17AF:30:36:CE40000:0:0:0:
+#EXTINF:-1,Radio Marginal
+#EXTVLCOPT:program=6060
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:2:17AC:30:36:CE40000:0:0:0:
+#EXTINF:-1,Radio Super Bock Super Rock
+#EXTVLCOPT:program=6065
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:2:17B1:30:36:CE40000:0:0:0:
+#EXTINF:-1,RDP África
+#EXTVLCOPT:program=6004
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:2:1774:30:36:CE40000:0:0:0:
+#EXTINF:-1,Renascença
+#EXTVLCOPT:program=6012
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:2:177C:30:36:CE40000:0:0:0:
+#EXTINF:-1,RFM
+#EXTVLCOPT:program=6011
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:2:177B:30:36:CE40000:0:0:0:
+#EXTINF:-1,Smooth FM
+#EXTVLCOPT:program=6008
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:2:1778:30:36:CE40000:0:0:0:
+#EXTINF:-1,Super FM
+#EXTVLCOPT:program=6064
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:2:17B0:30:36:CE40000:0:0:0:
+#EXTINF:-1,80s RFM
+#EXTVLCOPT:program=1415
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:2:587:68:53:CE40000:0:0:0:
+#EXTINF:-1,Antena 1 - Fado
+#EXTVLCOPT:program=1416
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:2:588:68:53:CE40000:0:0:0:
+#EXTINF:-1,Antena 1 - Memória
+#EXTVLCOPT:program=1417
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:2:589:68:53:CE40000:0:0:0:
+#EXTINF:-1,Antena 1 - Vida
+#EXTVLCOPT:program=1418
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:2:58A:68:53:CE40000:0:0:0:
+#EXTINF:-1,Antena 2 - Ópera
+#EXTVLCOPT:program=1419
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:2:58B:68:53:CE40000:0:0:0:
+#EXTINF:-1,Oceano Pacífico
+#EXTVLCOPT:program=1420
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:2:58C:68:53:CE40000:0:0:0:
+#EXTINF:-1,RFM Clubbing
+#EXTVLCOPT:program=1421
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:2:58D:68:53:CE40000:0:0:0:
+#EXTINF:-1,TSF
+#EXTVLCOPT:program=6054
+http://ruben:Alverca2021@atvdoguerra.dyndns.org:8010/1:0:2:17A6:2F:36:CE40000:0:0:0:
